@@ -26,7 +26,7 @@ def edits_two(word):
 
 def known(words):
     "The subset of `words` that appear in the `all_words`."
-    return set(word for word in words if word in all_words)
+    return list(word for word in words if word in all_words)
 
 def possible_corrections(word):
     "Generate possible spelling corrections for word."
