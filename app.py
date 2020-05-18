@@ -31,7 +31,7 @@ def known(words):
 def possible_corrections(word):
     "Generate possible spelling corrections for word."
     suggested_words = (known([word]) or known(edits_one(word)) or known(edits_two(word)) or [word])
-    return (suggested_words)
+    return list(suggested_words)
 
 def prob(word, N=sum(all_words.values())): 
     "Probability of `word`: Number of appearances of 'word' / total number of tokens"
