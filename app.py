@@ -53,7 +53,7 @@ def home():
 def recommend():
     message = request.args.get('word')
     r=possible_corrections(message)
-    if ''.join(r) ==message:
+    if ' '.join(r) ==message:
         return render_template('recommend.html',x=message,r=r,t='s')
     else:
         return render_template('recommend.html',x=message,r=r,t='suggested_words')
